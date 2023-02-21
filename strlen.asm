@@ -1,7 +1,7 @@
 BITS 64;
 
-global myStrlen;
-    myStrlen:
+global strlen;
+    strlen:
         mov rdx, rdi
         mov rcx, 0
 
