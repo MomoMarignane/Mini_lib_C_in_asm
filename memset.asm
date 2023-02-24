@@ -10,7 +10,7 @@ global memset
         cmp rcx,        0
         je              .return
         dec             rcx
-        mov [rax],   sil
+        mov [rax],      sil
         jmp             .loop
 
     .return:
