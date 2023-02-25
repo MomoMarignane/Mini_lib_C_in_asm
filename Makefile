@@ -21,7 +21,7 @@ all: $(NAME)
 
 $(NAME):	$(OBJ)
 	@ld	-shared	-nostdlib	-fPIC	-o	$(NAME)	$(OBJ)
-	gcc -fno-builtin	main.c	libasm.so	-o	minilib
+	# gcc -fno-builtin	main.c	libasm.so	-o	minilib
 
 %.o:	%.asm
 	@nasm	-f	elf64	$<	-o	$@

@@ -1,16 +1,16 @@
 BITS 64;
 
-global strlen;
+global strlen
     strlen:
-        mov rdx, rdi
-        mov rcx, 0
+        mov         rcx, 0
 
     .loop:
-        inc rcx
-        inc rdx
-        cmp byte[rdx], 0
-        jnz .loop
+        cmp         byte [rdi], 0
+        je          .return
+        inc         rcx
+        inc         rdi
+        jnz         .loop
 
     .return:
-        mov rax, rcx
+        mov         rax, rcx
         ret

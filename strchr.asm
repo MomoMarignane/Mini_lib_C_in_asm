@@ -1,22 +1,22 @@
 BITS 64
 
-global strchr;
+global strchr
     strchr:
-        mov rax, rdi
-        mov rax, rsi
+        mov         rax, rdi
+        mov         rax, rsi
 
     .loop:
-        cmp byte [rdi], al
-        je .true
-        cmp byte [rdi], 0
-        je .false
-        inc rdi
-        jmp .loop
+        cmp         byte [rdi], al
+        je          .true
+        cmp         byte [rdi], 0
+        je          .false
+        inc         rdi
+        jmp         .loop
 
     .true:
-        mov rax, rdi
+        mov         rax, rdi
         ret
 
     .false:
-        xor rax, rax
+        xor         rax, rax
         ret
