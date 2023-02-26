@@ -1,5 +1,3 @@
-BITS 64
-
 global memset
     .memset:
         mov         rax, rdi

@@ -1,5 +1,3 @@
-BITS 64
-
 global memcpy
     .memcpy:
         mov         rax, rdi

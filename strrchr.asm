@@ -1,5 +1,3 @@
-BITS 64
-
 global strrchr
     .strrchr:
         mov         rdx, rdi

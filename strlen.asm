@@ -1,5 +1,3 @@
-BITS 64;
-
 global strlen
     strlen:
         mov         rcx, 0

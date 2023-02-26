@@ -1,5 +1,3 @@
-BITS 64
-
 global strchr
     strchr:
         mov         rax, rdi

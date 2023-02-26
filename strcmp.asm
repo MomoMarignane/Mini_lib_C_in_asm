@@ -1,5 +1,3 @@
-BITS 64
-
 global strcmp
     .strcmp:
         cmp         rsi, 0
