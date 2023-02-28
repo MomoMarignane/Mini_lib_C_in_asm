@@ -3,18 +3,18 @@ global strchr
         mov         rax, rdi
         mov         rax, rsi
 
-    .loop:
+    loop:
         cmp         byte [rdi], al
-        je          .true
+        je          true
         cmp         byte [rdi], 0
-        je          .false
+        je          false
         inc         rdi
-        jmp         .loop
+        jmp         loop
 
-    .true:
+    true:
         mov         rax, rdi
         ret
 
-    .false:
+    false:
         xor         rax, rax
         ret

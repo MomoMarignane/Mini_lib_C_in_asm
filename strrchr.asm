@@ -1,26 +1,26 @@
 global strrchr
-    .strrchr:
+    strrchr:
         mov         rdx, rdi
-        jmp         .upRdx
+        jmp         upRdx
 
-    .upRdx:
+    upRdx:
         cmp         rdx, 0
-        je          .loop
+        je          loop
         inc         rdx
-        jmp         .upRdx
+        jmp         upRdx
 
-    .loop:
+    loop:
         dec         rdx
         cmp         rdx, rsi
-        je          .true
+        je          true
         cmp         rdx, 0
-        je          .false
-        jmp         .loop
+        je          false
+        jmp         loop
 
-    .true:
+    true:
         mov         rax, rdx
         ret
 
-    .false:
+    false:
         xor         rax, rax
         ret

@@ -1,15 +1,15 @@
 global memset
-    .memset:
+    memset:
         mov         rax, rdi
         mov         rcx, rdx
-        jmp         .loop
+        jmp         loop
 
-    .loop:
+    loop:
         cmp         rcx, 0
-        je          .return
+        je          return
         dec         rcx
         mov         [rax], sil
-        jmp         .loop
+        jmp         loop
 
-    .return:
+    return:
         ret

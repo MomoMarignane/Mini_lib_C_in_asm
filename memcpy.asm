@@ -1,15 +1,15 @@
 global memcpy
-    .memcpy:
+    memcpy:
         mov         rax, rdi
-        jmp         .loop
+        jmp         loop
 
-    .loop:
+    loop:
         mov         rax, rsi
         inc         rsi
         cmp         rsi, 0
-        je          .return
-        jmp         .loop
+        je          return
+        jmp         loop
 
-    .return:
+    return:
         ret
 

@@ -2,13 +2,13 @@ global strlen
     strlen:
         mov         rcx, 0
 
-    .loop:
+    loop:
         cmp         byte [rdi], 0
-        je          .return
+        je          return
         inc         rcx
         inc         rdi
-        jnz         .loop
+        jnz         loop
 
-    .return:
+    return:
         mov         rax, rcx
         ret

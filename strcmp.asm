@@ -1,16 +1,16 @@
 global strcmp
-    .strcmp:
+    strcmp:
         cmp         rsi, 0
-        je          .true
+        je          true
         cmp         rsi, rdi
-        je          .strcmp
-        jmp         .false
+        je          strcmp
+        jmp         false
 
-    .true:
+    true:
         sub         rsi, rdi
         mov         rax, rsi
         ret
 
-    .false:
+    false:
         xor         rax, rax
         ret
